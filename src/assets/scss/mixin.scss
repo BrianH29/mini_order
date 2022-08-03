@@ -1,0 +1,20 @@
+@mixin textStyle($font-family:NotoSerifKR, $font-color : #2f2a26, $font-size : 1.5rem, $spacing: normal) {
+  font-family: $font-family;
+  color: $font-color;
+  font-size: $font-size;
+  letter-spacing: $spacing;
+}
+
+@mixin border($style: 1px solid #2f2a26, $radius: 4.25vw, $padding: 3px 21px){
+  border: $style;
+  border-radius: $radius;
+  padding: $padding;
+  box-sizing: border-box;
+}
+
+@mixin button($bg: #fffff, $width, $height, $border-radius){
+  background: $bg;
+  width: $width;
+  height: $height;
+  border-radius: $border-radius;
+}
