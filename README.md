@@ -1,5 +1,5 @@
-# 메뉴 주문하기
+# Order
 
-## 실행 방법
+## To Start
 1. npm install
 2. npm run dev# mini_order
