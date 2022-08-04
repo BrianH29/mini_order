@@ -3712,11 +3712,11 @@
   "event":[
     {
       "name" : "타다 LITE 20% 쿠폰 증정",
-      "imgUrl" : "https://s3.ap-northeast-2.amazonaws.com/recruit.torder.io/front/test/assets/tada.png"
+      "imgUrl" : ""
     },
     {
       "name" : "토스 신규가입 하면 만 원 즉시 지급!",
-      "imgUrl" : "https://s3.ap-northeast-2.amazonaws.com/recruit.torder.io/front/test/assets/toss.png"
+      "imgUrl" : ""
     }
   ],
   "serviceItems":[
