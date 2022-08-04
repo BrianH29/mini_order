@@ -10,7 +10,7 @@ const clickEvent = sort => {
 <template>
   <div class="cart-bottom-btn">
     <TextStyle
-      content="닫기"
+      content="주문담기"
       class="cart-bottom-btn-close"
       @click="clickEvent('closeCart')"
     />
