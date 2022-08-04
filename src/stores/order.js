@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 import { useCart } from './cart.js';
-import $commons from '../utils/common.js';
+import $commons from '@/utils/common.js';
 
 export const useOrder = defineStore('useOrder', {
   state: () => ({

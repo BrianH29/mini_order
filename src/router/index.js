@@ -14,14 +14,19 @@ const router = createRouter({
       component: () => import('@/views/index.vue'),
     },
     {
-      path: '/orderHistory',
+      path: '/orderhistory',
       name: 'orderHistory',
       component: () => import('@/views/orderHistoryList.vue'),
     },
     {
-      path: '/billPage',
+      path: '/billpage',
       name: 'billPage',
       component: () => import('@/views/billPage.vue'),
+    },
+    {
+      path: '/menuDetail',
+      name: 'menuDetail',
+      component: () => import('@/views/menu.vue'),
     },
   ],
 });

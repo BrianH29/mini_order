@@ -5,14 +5,20 @@ import SlidePopup from '@/components/Organisms/SlidePopup.vue';
 import { useMenuSeparator } from '@/stores/menuSeparator.js';
 import { useCart } from '@/stores/cart.js';
 import { useCommon } from '@/stores/common.js';
+import { useMenuDetail } from '@/stores/menuDetail.js';
+import { useRouter } from 'vue-router';
 
 const menuSeparatorStore = useMenuSeparator();
 const cartStore = useCart();
 const commonStore = useCommon();
+const menuDetailStore = useMenuDetail();
+const router = useRouter();
 
 const clickEvent = (item, opt) => {
   switch (opt) {
     case '상세설명':
+      router.push('/menuDetail');
+      menuDetailStore.saveMenuDetail(item);
       console.log('item , opt : ', item, opt);
       break;
     case '옵션':

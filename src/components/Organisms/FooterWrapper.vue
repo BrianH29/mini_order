@@ -8,10 +8,10 @@ const router = useRouter();
 const clickEvent = sort => {
   switch (sort) {
     case 'history':
-      router.push('/orderHistory');
+      router.push('/orderhistory');
       break;
     case 'bill':
-      router.push('/billPage');
+      router.push('/billpage');
       break;
   }
 };

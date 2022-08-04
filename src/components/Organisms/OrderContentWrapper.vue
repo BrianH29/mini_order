@@ -32,5 +32,6 @@ let num = orderStore.getOrderNumber;
 .order-content-wrapper {
   padding: 0 5vw;
   margin-top: 3.125vw;
+  border-bottom: 0.125vw solid #ddd;
 }
 </style>
