@@ -11,3 +11,9 @@
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
+<script>
+    const viewport = document.getElementsByName("viewport")[0];
+    const scale = screen.width >= 720 ? 720/screen.width : screen.width/720;
+
+    viewport.setAttribute("content", "width=device-width, initial-scale=" + scale + ", user-scalable=no")
+</script>
