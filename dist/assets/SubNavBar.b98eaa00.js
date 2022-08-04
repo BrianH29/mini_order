@@ -1,1 +1,0 @@
-import{N as t}from"./NavBar.3e7bc420.js";import{_ as a,o,c as n,a as c}from"./index.f9bf42c2.js";const r={class:"navBar-wrapper"},_={__name:"SubNavBar",props:{content:{type:String}},setup(e){return(s,p)=>(o(),n("div",r,[c(t,{controlType:"sub",content:e.content},null,8,["content"])]))}},v=a(_,[["__scopeId","data-v-90083060"]]);export{v as S};
