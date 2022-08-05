@@ -1,6 +1,6 @@
 <script setup>
 import TextStyle from '@/components/Atom/TextStyle.vue';
-import TwoContentContainer from '../TwoContentContainer.vue';
+import TwoContentContainer from '@/components/Atom/TwoContentContainer.vue';
 
 defineProps({
   goodsName: {

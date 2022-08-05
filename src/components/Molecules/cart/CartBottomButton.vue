@@ -1,5 +1,6 @@
 <script setup>
 import TextStyle from '@/components/Atom/TextStyle.vue';
+import TwoButtomButton from '@/components/Atom/TwoButtomButton.vue';
 
 const emit = defineEmits(['clickEvent']);
 const clickEvent = sort => {
@@ -8,26 +9,22 @@ const clickEvent = sort => {
 </script>
 
 <template>
-  <div class="cart-bottom-btn">
+  <TwoButtomButton>
     <TextStyle
       content="주문담기"
-      class="cart-bottom-btn-close"
+      class="bottom-btn-wrapper-close"
       @click="clickEvent('closeCart')"
     />
     <TextStyle
       content="주문하기"
-      class="cart-bottom-btn-order"
+      class="bottom-btn-wrapper-order"
       @click="clickEvent('order')"
     />
-  </div>
+  </TwoButtomButton>
 </template>
 
 <style lang="scss" scoped>
-.cart-bottom-btn {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
+.bottom-btn-wrapper {
   #{&}-close {
     display: flex;
     align-items: center;

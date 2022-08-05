@@ -19,7 +19,6 @@ const clickEvent = (item, opt) => {
     case '상세설명':
       router.push('/menuDetail');
       menuDetailStore.saveMenuDetail(item);
-      console.log('item , opt : ', item, opt);
       break;
     case '옵션':
       break;
