@@ -13,6 +13,11 @@ defineProps({
     default: 1,
   },
 });
+
+const emit = defineEmits(['clickEvent']);
+const clickEvent = sort => {
+  emit('clickEvent', sort);
+};
 </script>
 
 <template>
@@ -22,8 +27,8 @@ defineProps({
       <TextStyle :content="`${$commons.withComma(price)}원`" class="price" />
     </TwoContentContainer>
     <TwoContentContainer>
-      <TextStyle content="수량" class="quantity-title" />
-      <CartQuantity :quantity="minQuantity" />
+      <TextStyle content="최소수량" class="quantity-title" />
+      <CartQuantity :quantity="minQuantity" @clickEvent="clickEvent" />
     </TwoContentContainer>
   </div>
 </template>

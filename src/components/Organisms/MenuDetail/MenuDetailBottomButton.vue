@@ -7,14 +7,18 @@ defineProps({
     type: Number,
   },
 });
+const emit = defineEmits(['clickEvent']);
+const clickEvent = () => {
+  emit('clickEvent');
+};
 </script>
 
 <template>
   <OneBottomButton>
     <TextStyle
-      :content="`주문담기${$commons.withComma(price)}`"
+      :content="`주문담기 ${$commons.withComma(price)}`"
       class="one-bottom-btn-cart"
-      @click="clickEvent('closeCart')"
+      @click="clickEvent"
     />
   </OneBottomButton>
 </template>

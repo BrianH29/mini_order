@@ -1,5 +1,4 @@
 import { defineStore } from 'pinia';
-import { useCart } from './cart.js';
 import $commons from '@/utils/common.js';
 
 export const useOrder = defineStore('useOrder', {
@@ -15,25 +14,23 @@ export const useOrder = defineStore('useOrder', {
     getPerPerson: state => state.perPerson,
   },
   actions: {
-    setSaveOrder() {
-      const cartStore = useCart();
+    setSaveOrder(savedGoods) {
       if (this.saveOrder.length === 0) {
         this.saveOrder = [
           {
             orderTime: $commons.currentTime(),
-            item: cartStore.getSaveGoods,
+            item: savedGoods,
           },
         ];
       } else {
         this.saveOrder = [
           {
             orderTime: $commons.currentTime(),
-            item: cartStore.getSaveGoods,
+            item: savedGoods,
           },
           ...this.saveOrder,
         ];
       }
-      cartStore.cartList = [];
     },
     setSaveTotalPrice(data) {
       this.totalOrderPrice += parseInt(data);
