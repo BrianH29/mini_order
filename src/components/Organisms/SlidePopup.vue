@@ -29,9 +29,9 @@ defineProps({
       class="content-wrap"
       :style="`height:${height}`"
     >
-      <div class="open-slide">
-        <p class="slide-btn">펄쳐보기</p>
-      </div>
+      <!--      <div class="open-slide">-->
+      <!--        <p class="slide-btn">펄쳐보기</p>-->
+      <!--      </div>-->
       <component :is="tab[pages]"></component>
     </div>
   </transition>

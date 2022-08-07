@@ -28,7 +28,8 @@ const clickEvent = sort => {
       if (!commonStore.getFooterShow) commonStore.setFooterShow(true);
       cartStore.setSlide(false);
       toastStore.setToastPopup(`주문을 완료했습니다.`);
-      orderStore.setSaveOrder();
+      orderStore.setSaveOrder(cartStore.getSaveGoods);
+      cartStore.cartList = [];
       break;
     case 'removeAll':
       cartStore.$reset();

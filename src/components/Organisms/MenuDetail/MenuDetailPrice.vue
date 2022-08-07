@@ -1,29 +1,34 @@
 <script setup>
-import TwoContentContainer from '@/components/Molecules/TwoContentContainer.vue';
+import TwoContentContainer from '@/components/Atom/TwoContentContainer.vue';
 import TextStyle from '@/components/Atom/TextStyle.vue';
 import CartQuantity from '@/components/Molecules/cart/CartQuantity.vue';
 import $commons from '@/utils/common.js';
 
 defineProps({
   price: {
-    type: String,
+    type: Number,
   },
   minQuantity: {
-    type: String,
-    default: '1',
+    type: Number,
+    default: 1,
   },
 });
+
+const emit = defineEmits(['clickEvent']);
+const clickEvent = sort => {
+  emit('clickEvent', sort);
+};
 </script>
 
 <template>
   <div class="menu-detail-price-wrapper">
     <TwoContentContainer>
       <TextStyle content="금액" class="price-title" />
-      <TextStyle :content="$commons.withComma(price)" class="price" />
+      <TextStyle :content="`${$commons.withComma(price)}원`" class="price" />
     </TwoContentContainer>
     <TwoContentContainer>
-      <TextStyle content="수량" class="quantity-title" />
-      <CartQuantity :quantity="minQuantity" />
+      <TextStyle content="최소수량" class="quantity-title" />
+      <CartQuantity :quantity="minQuantity" @clickEvent="clickEvent" />
     </TwoContentContainer>
   </div>
 </template>
@@ -31,13 +36,12 @@ defineProps({
 <style lang="scss" scoped>
 .menu-detail-price-wrapper {
   padding: 0 5vw;
-  border-bottom: 0.125vw solid #ddd;
+  border-bottom: 1.1vw solid #ddd;
 }
 
 .price-title,
 .quantity-title {
-  font-weight: 600;
-  @include textStyle(Nanum Myeongjo, #2b2d2f, 2rem, normal);
+  @include textStyle(Nanum Myeongjo, #2b2d2f, 1.5rem, normal);
 }
 
 .price {
