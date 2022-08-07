@@ -9,23 +9,23 @@ export const useMenuDetail = defineStore('useMenuDetail', {
     getMenuName: state => state.menuDetail.name,
     getMenuDescription: state => state.menuDetail.description,
     getMenuPrice: state => state.menuDetail.price,
-    getQuantity: state => state.menuDetail.quantity,
+    getQuantity: state => state.menuDetail.selectedCount,
     getMinimumTotalPrice: state =>
-      state.menuDetail.price * state.menuDetail.quantity,
+      state.menuDetail.price * state.menuDetail.selectedCount,
   },
   actions: {
     saveMenuDetail(data) {
-      this.menuDetail = { ...data, quantity: data.orderMinQuantity };
+      this.menuDetail = { ...data, selectedCount: data.orderMinQuantity };
     },
     increaseQuantity() {
       this.menuDetail.quantity < this.menuDetail.orderMaxQuantity
-        ? ++this.menuDetail.quantity
-        : this.menuDetail.quantity;
+        ? ++this.menuDetail.selectedCount
+        : this.menuDetail.selectedCount;
     },
     decreaseQuantity() {
       this.menuDetail.quantity > this.menuDetail.orderMinQuantity
-        ? --this.menuDetail.quantity
-        : this.menuDetail.quantity;
+        ? --this.menuDetail.selectedCount
+        : this.menuDetail.selectedCount;
     },
   },
 });

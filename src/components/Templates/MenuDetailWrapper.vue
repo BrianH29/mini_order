@@ -5,9 +5,12 @@ import MenuDetailPrice from '@/components/Organisms/MenuDetail/MenuDetailPrice.v
 import MenuDetailBottomButton from '@/components/Organisms/MenuDetail/MenuDetailBottomButton.vue';
 
 import { useMenuDetail } from '@/stores/menuDetail.js';
+import { useToastPopup } from '@/stores/toastPopup.js';
+
 import { useOrder } from '@/stores/order.js';
 
 const menuDetailStore = useMenuDetail();
+const toastStore = useToastPopup();
 const orderStore = useOrder();
 
 const clickEvent = sort => {
@@ -19,8 +22,8 @@ const clickEvent = sort => {
       menuDetailStore.decreaseQuantity();
       break;
     case 'saveGoods':
-      orderStore.setSaveOrder(menuDetailStore.menuDetail);
-      menuDetailStore.menuDetail = [];
+      toastStore.setToastPopup(`주문을 완료했습니다.`);
+      orderStore.setSaveOrder([menuDetailStore.menuDetail]);
       break;
   }
 };
