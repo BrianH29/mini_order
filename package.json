@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy" : "yarn build & sh deploy.sh",
+    "deploy" : "sh deploy.sh",
     "preview": "vite preview --port 4173",
     "test": "vitest --environment jsdom",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
