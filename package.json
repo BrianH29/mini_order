@@ -4,7 +4,6 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy" : "yarn build & git subtree push --prefix dist origin gh-pages",
     "preview": "vite preview --port 4173",
     "test": "vitest --environment jsdom",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
@@ -15,7 +14,6 @@
     "@fortawesome/free-regular-svg-icons": "^6.1.2",
     "@fortawesome/free-solid-svg-icons": "^6.1.2",
     "@fortawesome/vue-fontawesome": "^3.0.1",
-    "gh-pages": "^4.0.0",
     "pinia": "^2.0.16",
     "swiper": "^8.3.1",
     "vue": "^3.2.37",
