@@ -2,7 +2,7 @@
 
 ## To Start
 1. npm install
-2. npm run dev# mini_order
+2. npm run dev
 
 
 ### To See
